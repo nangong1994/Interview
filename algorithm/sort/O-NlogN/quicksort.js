@@ -28,5 +28,9 @@ function quickSort(array) {
 
   return quickSort(left).concat(pivot).concat(quickSort(right));
 }
-
+/**
+ * @description
+ * Test cases
+ * 
+ */
 console.log(quickSort([3,4,10,-1,8,6]));
