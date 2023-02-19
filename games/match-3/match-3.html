@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MATCH-3</title>
+</head>
+<body id="main-area">
+  <div class="chess-outerline" id="chess-outerline">
+
+  </div>
+</body>
+</html>
+
+<script src="./match-3.js" defer></script>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  html body {
+    height: 100vh;
+  }
+  html #main-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chess-outerline {
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid grey;
+  }
+  .chess-element {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    user-select: none;
+    cursor: pointer;
+    border: 0.5px solid rgb(148, 192, 245);
+  }
+</style>
