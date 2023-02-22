@@ -3,7 +3,7 @@
  * @param { number[] } array 
  * @return { number[] }
  */
-function quickSort(array) {
+module.exports = function quickSort(array) {
   // if array is empty, return empty
   if (!array || !array.length) {
     return [];
@@ -28,9 +28,3 @@ function quickSort(array) {
 
   return quickSort(left).concat(pivot).concat(quickSort(right));
 }
-/**
- * @description
- * Test cases
- * 
- */
-console.log(quickSort([3,4,10,-1,8,6]));

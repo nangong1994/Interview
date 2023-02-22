@@ -3,7 +3,7 @@
  * @param { number[] } array 
  * @return { number[] }
  */
-function heapSort(array) {
+module.exports = function heapSort(array) {
   // if array is empty, return empty
   if (!array || !array.length) {
     return [];
@@ -93,7 +93,3 @@ function swap(array, i, j) {
 
   [array[i], array[j]] = [array[j], array[i]];
 }
-
-const arr = [4, 10, 3, 5, 1, 2];
-heapSort(arr, arr.length)
-console.log(arr);

@@ -19,9 +19,9 @@ module.exports = function insertionSort(array, step) {
   let h = step == null ? 1 : step;
 
   for (let i = h; i < array.length; i++) {
-    for (let j = i; j > (h - 1) && array[j] < array[j - 1]; j -= h) {
-      if (array[j] < array[j - 1]) {
-        [array[j], array[j - 1]] = [array[j - 1], array[j]];
+    for (let j = i; j > (h - 1) && array[j] < array[j - h]; j -= h) {
+      if (array[j] < array[j - h]) {
+        [array[j], array[j - h]] = [array[j - h], array[j]];
       }
     }
   }
