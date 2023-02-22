@@ -12,6 +12,7 @@ LOGGER.prototype.info = function() {
 /**
  * 
  * @param { any } msg
+ * @returns { string }
  */
 function formatMsg() {
   if (!arguments || !arguments.length) {

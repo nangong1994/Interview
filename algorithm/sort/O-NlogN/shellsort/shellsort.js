@@ -4,7 +4,7 @@ const insertionSort = require('../../O-N2/insertionsort/insertionsort');
  * @param { number[] } array 
  * @return { number[] }
  */
-function shellSort(array) {
+module.exports = function shellSort(array) {
   // if array is empty, return empty
   if (!array || !array.length) {
     return [];
@@ -45,6 +45,3 @@ function calcKnuthGap(arrLen) {
   }
   return h;
 }
-
-const arr = [3,4,10,-1,8,6];
-console.log(shellSort(arr));
