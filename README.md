@@ -20,21 +20,24 @@
   
   - O(N) sorting
     1. [Need to Update]()
+- **Binary**
+  - [Gray Code](./algorithm/binary/gray-code/README.md);
+  - [Hamming Weight](./algorithm/binary/hamming-weight/README.md);
 
-- **Data Structure**
-  <p style='line-height: 50px'>Need to update</p>
+## Data Structure
+<p>Need to update</p>
 
-- **Dynamic Programming**
-  <p style='line-height: 50px'>Need to update</p>
+## Dynamic Programming
+<p >Need to update</p>
 
-- **Design Patterns**
-  <p style='line-height: 50px'>Need to update</p>
+## Design Patterns
+<p >Need to update</p>
 
-- **React Relatives**
-  <p style='line-height: 50px'>Need to update</p>
+## React Relatives
+<p >Need to update</p>
 
-- **Webpack Relatives**
-  <p style='line-height: 50px'>Need to update</p>
+## Webpack Relatives
+<p >Need to update</p>
 
-- **NPM Relatives**
-  <p style='line-height: 50px'>Need to update</p>
+## NPM Relatives
+<p >Need to update</p>
