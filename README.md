@@ -41,3 +41,8 @@
 
 ## NPM Relatives
 <p >Need to update</p>
+
+## Package Relatives
+Some independent modules are put here such as `EventPool`,`Weighted Random` for javascript.
+- **[EventPool](./packages/eventpool/README.md)**:
+- **[JSExtends](./packages/extends/README.md)**:
