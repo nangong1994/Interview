@@ -1,0 +1,33 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "description": "This repository is for interviews",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test:unit": "jest --config=./jest.config/config.json --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nangong1994/Interview.git"
+  },
+  "keywords": [
+    "interview",
+    "jest",
+    "webpack",
+    "algorithm",
+    "data-structure",
+    "react",
+    "npms"
+  ],
+  "author": "nangong1994",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nangong1994/Interview/issues"
+  },
+  "homepage": "https://github.com/nangong1994/Interview#readme",
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}

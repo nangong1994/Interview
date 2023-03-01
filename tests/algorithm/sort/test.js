@@ -1,6 +1,6 @@
 const TEST_ARRAY = [100, -3, 9, 0, -10, 8, 20, 16, 88];
 
-const LOGGER = require('../../index');
+const { LOGGER } = require('../../index');
 const SourceLog = ['Source:', TEST_ARRAY]
 
 /* Sortings */
