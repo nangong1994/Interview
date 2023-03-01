@@ -1,0 +1,10 @@
+{
+  "rootDir": "../tests/",
+
+  "silent": true,
+
+  "collectCoverage": true,
+  "coverageDirectory": "../jest.coverage/",
+
+  "filter": "../jest.config/jest.filter.js"
+}

@@ -1,2 +1,3 @@
 const LOGGER = require('../logger/index');
-module.exports = LOGGER;
+const JSExtends = require('../packages/extends');
+module.exports = { LOGGER, JSExtends };
