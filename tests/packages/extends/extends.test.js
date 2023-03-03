@@ -13,6 +13,10 @@ const a = new A();
 const b = new B();
 const c = new JSExtends(a, b);
 
-test('JS Extends Test, expected to be true: ', () => {
+test('JS Extends Test, A extends B, instance c should be A instance: ', () => {
   expect(c instanceof A).toBe(true);
+});
+
+test('JS Extends Test, A extends B, instance c should be B instance: ', () => {
+  expect(c instanceof B).toBe(true);
 });
