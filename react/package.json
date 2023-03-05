@@ -1,0 +1,16 @@
+{
+  "name": "react-basic",
+  "version": "1.0.0",
+  "description": "This directory is for react basic knowledge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "jest",
+    "basics"
+  ],
+  "author": "nangong1994",
+  "license": "ISC"
+}
