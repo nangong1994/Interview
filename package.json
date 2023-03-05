@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/nangong1994/Interview#readme",
   "devDependencies": {
+    "@types/jest": "^29.4.0",
     "jest": "^29.4.3"
   }
 }

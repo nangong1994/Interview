@@ -34,7 +34,9 @@
 <p >Need to update</p>
 
 ## React Relatives
-<p >Need to update</p>
+- **[React Fundamentals](./react/README.md)**
+- **[React Native](./react/README.md)**
+- **[Redux](./react/README.md)**
 
 ## Webpack Relatives
 <p >Need to update</p>
@@ -46,3 +48,5 @@
 Some independent modules are put here such as `EventPool`,`Weighted Random` for javascript.
 - **[EventPool](./packages/eventpool/README.md)**:
 - **[JSExtends](./packages/extends/README.md)**:
+- **[InstanceOf](./packages/instanceof/README.md)**:
+- **[Symbols](./packages/symbols/README.md)**:

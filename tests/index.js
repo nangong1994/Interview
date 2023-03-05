@@ -1,3 +1,5 @@
 const LOGGER = require('../logger/index');
 const JSExtends = require('../packages/extends');
-module.exports = { LOGGER, JSExtends };
+const InstanceOf = require('../packages/instanceof');
+const FuncCurry  = require('../packages/currying');
+module.exports = { LOGGER, JSExtends, InstanceOf, FuncCurry };

@@ -26,7 +26,7 @@ class TaskManager {
     if (typeof task !== 'function') {
       return;
     }
-
+    
     this.taskQueue.push(task);
   }
 
