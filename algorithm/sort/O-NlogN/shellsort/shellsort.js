@@ -1,6 +1,10 @@
 const insertionSort = require('../../O-N2/insertionsort/insertionsort');
 /**
  * 
+ * @description
+ * The time complexity of ShellSort strictly is not O(Nlog(N)).
+ * It is about O(N^(1.3 ~ 2)) !!!
+ * 
  * @param { number[] } array 
  * @return { number[] }
  */
