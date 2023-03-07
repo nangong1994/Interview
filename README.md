@@ -17,6 +17,7 @@
     1. [Quick Sorting](./algorithm/sort/O-NlogN/quicksort/quicksort.js)
     2. [Heap Sorting](./algorithm//sort//O-NlogN/heapsort/heapsort.js)
     3. [Shell Sorting](./algorithm/sort/O-NlogN/shellsort/shellsort.js)
+    4. [Merge Sorting](./algorithm//sort//O-NlogN/mergesort/mergesort.js)
   
   - O(N) sorting
     1. [Need to Update]()
