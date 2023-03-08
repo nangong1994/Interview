@@ -3,7 +3,7 @@
     <b style='color: #58a6ff'>Interviews</b>
   </h1>
 
-  <p>This repository is the collection of the most frequent questions(with answer) for FEE</p>
+  <p>This repository is mainly recording some front-end basic knowledge.</p>
 </div>
 
 ## Algorithm
@@ -97,15 +97,20 @@
   | Visitor Pattern     | 访问者模式  |
 
 ## React Relatives
-- **[React Fundamentals](./react/README.md)**
-- **[React Native](./react/README.md)**
-- **[Redux](./react/README.md)**
+- React Fundamentals
+- React Native
+- Redux
+- Samples
+For more detailed information, please go to the **[react-folder](./react/README.md)** and try.
 
 ## Webpack Relatives
 <p >Need to update</p>
 
 ## NPM Relatives
 <p >Need to update</p>
+
+## Promise
+For detailed implement, please go to **[promise-folder](./promise/README.md)** which implemented by javascript and just for practice of **PromiseA+**.
 
 ## Package Relatives
 Some independent modules are put here such as `EventPool`,`Weighted Random` for javascript.
