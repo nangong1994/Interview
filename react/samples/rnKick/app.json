@@ -1,0 +1,11 @@
+{
+  "name": "rnKick",
+  "displayName": "rnKick",
+  "extra": {
+    "eas": {
+      "projectId": "80c9f79c-752f-4908-a059-b9953d1263a1"
+    }
+  },
+  "owner": "nangong1994",
+  "slug": "rn-kick"
+}
