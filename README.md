@@ -113,8 +113,5 @@ For more detailed information, please go to the **[react-folder](./react/README.
 For detailed implement, please go to **[promise-folder](./promise/README.md)** which implemented by javascript and just for practice of **PromiseA+**.
 
 ## Package Relatives
-Some independent modules are put here such as `EventPool`,`Weighted Random` for javascript.
-- **[EventPool](./packages/eventpool/README.md)**:
-- **[JSExtends](./packages/extends/README.md)**:
-- **[InstanceOf](./packages/instanceof/README.md)**:
-- **[Symbols](./packages/symbols/README.md)**:
+Some independent modules are put here such as `EventPool`,`Weighted Random` for javascript.  
+For more detailed information, please go to the **[package-folder](./packages/README.md)** and try.
