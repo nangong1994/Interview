@@ -43,24 +43,44 @@ class TaskManager {
       return;
     }
 
-    if (this.currentTaskCount >= this.maxTaskCount) {
-      await new Promise((resolve) => {
-        // just let the task pending, and resolve enqueue
-        this.taskQueue.push(resolve);
+    let result;
+
+    try {
+      if (this.currentTaskCount >= this.maxTaskCount) {
+        await new Promise((resolve) => {
+          // just let the task pending, and resolve enqueue
+          this.taskQueue.push(resolve);
+        });
+      }
+  
+      this.currentTaskCount++;
+      const asyncTask = this.#executeTask(task, ...args);
+      await new Promise((resolve, reject) => {
+        asyncTask.then((valaue) => {
+          resolve(valaue);
+          result = valaue;
+          this.#dequeue();
+        }, (reason) => {
+          result = reason;
+          reject(reason);
+          this.#dequeue();
+        });
       });
-    }
-
-    this.currentTaskCount++;
-
-    const result = await this.#executeTask(task, ...args);
-
-    this.currentTaskCount--;
-    
-    if (this.taskQueue.length) {
-      this.taskQueue.shift()();
+    } catch(e) {
+      throw e;
     }
 
     return result;
+  }
+
+  #dequeue = () => {
+    // once resolve or reject the task
+    // running task is removed
+    this.currentTaskCount--;
+    // dequeue the pending task and enqueue the new task
+    if (this.taskQueue.length) {
+      this.taskQueue.shift()();
+    }
   }
 }
 
