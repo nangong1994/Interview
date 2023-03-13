@@ -11,8 +11,40 @@ The synchronous tasks will be push onto the `main call stask` of Javascript main
 
 Let`s show some code for synchronous call execution:  
 ```javascript
-function 
+
+/**
+ * @description
+ * Define area = a * b;
+ * 
+*/
+function Area(a, b) {
+  if (!a || !b) {
+    return 0;
+  }
+
+  if (isNaN(a) || isNaN(b)) {
+    return 0;
+  }
+
+  return a * b;
+}
+
+/**
+ * @description
+ * Calc circle area
+*/
+function CircleArea(radius) {
+  return Area(Math.PI, radius ** 2)
+}
+
+function printCicleArea() {
+  const area = CircleArea(2);
+  console.log(area);
+}
 ```
+Let`s show code execution by graph:
+<img src="./img/call-stack.png" alt="sync call stack"/> 
+
 
 But if there is a large task which needs a long time to calculate and execute, waht to do ?
 
@@ -25,7 +57,7 @@ But if there is a large task which needs a long time to calculate and execute, w
 One of the way is using `asynchronous` method to handle.
 
 ## Asynchronous Calls
-
+!["Event Loop"](./img/event-loop.png)
 
 ## Callback Hell
 

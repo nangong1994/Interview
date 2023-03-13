@@ -84,4 +84,8 @@ class TaskManager {
   }
 }
 
+// TO DO
+// another way
+// https://github.com/rxaviers/async-pool/tree/1.x
+
 module.exports = TaskManager;
