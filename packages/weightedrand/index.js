@@ -98,7 +98,15 @@ class WeightedRandom {
     }
     return res;
   }
+
+  // https://www.educative.io/answers/what-is-the-weighted-random-selection-algorithm
   
+  /**
+   * @description
+   * https://lotabout.me/2018/Weighted-Random-Sampling/
+   * 
+   * @returns { number }
+   */
   A_ExpJ() {
     if (!this.sampleLen) {
       return 0;
