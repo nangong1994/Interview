@@ -1,46 +1,85 @@
 /**
  * 
- * @param { number[] } array1
- * @param { number[] } array2
+ * @param { number[] } array
  * 
  * @returns { number[] }
  */
-function mergeSort(array1, array2) {
-  let arr1 = array1 || [];
-  let arr2 = array2 || [];
+function mergeSort(array) {
+  let arr = array || [];
 
-  // sort the input arrays
-  arr1 = arr1.sort((a, b) => { return a - b; });
-  arr2 = arr2.sort((a, b) => { return a - b; });
+  let l = 0;
+  let r = arr.length - 1;
 
-  let pTr1 = 0;
-  let pTr2 = 0;
-  let pTr3 = 0;
-  let sortedArr = new Array();
+  const tempArr = new Array(arr.length);
+  mSort(arr, tempArr, l, r);
 
-  const len1 = arr1.length;
-  const len2 = arr2.length;
+  return arr;
+}
 
-  while(true) {
-    if (pTr1 < len1 && arr1[pTr1] <= arr2[pTr2]) {
-      sortedArr[pTr3++] = arr1[pTr1++];
+/**
+ * 
+ * @param { number[] } array 
+ * @param { number[] } tempArr 
+ * @param { number } l 
+ * @param { number } r 
+ */
+function mSort(array, tempArr, l, r) {
+  if (l < r) {
+    // mid pivot
+    let m = Math.floor((l + r) / 2);
+    // left
+    mSort(array, tempArr, l, m);
+    // right
+    mSort(array, tempArr, m + 1, r);
+    // merge array
+    merge(array, tempArr, l, m, r);
+  }
+}
 
-      if (pTr1 >= len1 && pTr2 < len2) {
-        sortedArr = sortedArr.concat(arr2.splice(pTr2, len2 - pTr2));
-        break;
-      }
-    }
-    if(pTr2 < len2 && arr1[pTr1] > arr2[pTr2]) {
-      sortedArr[pTr3++] = arr2[pTr2++];
+/**
+ * 
+ * @param { number[] } array 
+ * @param { number[] } tempArr 
+ * @param { number } l 
+ * @param { number } m
+ * @param { number } r 
+ */
+function merge(array, tempArr, l, m, r) {
+  // left first element
+  let left  = l;
+  // rigjt first element
+  let right = m + 1;
+  // temp pos
+  let pos = l;
 
-      if (pTr2 >= len2 && pTr1 < len1) {
-        sortedArr = sortedArr.concat(arr1.splice(pTr1, len1 - pTr1));
-        break;
-      }
+  // merge array
+  while(left <= m && right <= r) {
+    if (array[left] <= array[right]) {
+      tempArr[pos++] = array[left++];
+    } else {
+      tempArr[pos++] = array[right++];
     }
   }
 
-  return sortedArr;
+  // check left rest elements
+  while(left <= m) {
+    tempArr[pos++] = array[left++];
+  }
+
+  // check right rest elements
+  while(right <= r) {
+    tempArr[pos++] = array[right++];
+  }
+
+  // merge tempArr into array
+  while(l <= r) {
+    array[l] = tempArr[l];
+    l++;
+  }
 }
+
+const TEST_ARRAY_2 = [10, -6, 2];
+mergeSort(TEST_ARRAY_2)
+console.log(TEST_ARRAY_2)
 
 module.exports = mergeSort;
