@@ -38,5 +38,6 @@ test('ShellSort Test:', () => {
 const TEST_ARRAY_2 = [10, -6, 2];
 const mergeSort = require('../../../algorithm/sort/O-NlogN/mergesort/mergesort');
 test('ShellSort Test:', () => {
-  expect(mergeSort([...TEST_ARRAY], [...TEST_ARRAY_2])).toEqual([...TEST_ARRAY, ...TEST_ARRAY_2].sort((a, b) => {return a - b;}));
+  expect(mergeSort([...TEST_ARRAY, ...TEST_ARRAY_2])).toEqual([...TEST_ARRAY, ...TEST_ARRAY_2].sort((a, b) => {return a - b;}));
 });
+
