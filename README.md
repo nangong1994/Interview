@@ -76,3 +76,6 @@ For detailed implement, please go to **[promise-folder](./promise/README.md)** w
 ## Package Relatives
 Some independent modules are put here such as `EventPool`,`Weighted Random` for javascript.  
 For more detailed information, please go to the **[package-folder](./packages/README.md)** and try.
+
+## Mermaid Practice
+The files in this path will show some demos and best practice for `Mermaid` in [Markdown](./mermaid/README.md) files.
