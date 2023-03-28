@@ -25,7 +25,7 @@ sequenceDiagram
   ```javascript
     ...mermaid
     // %% Fist line, declare diagram type
-    SequenceDiagram
+    sequenceDiagram
 
       Phoebe ->> Vera: Hello
       Vera ->> Phoebe: sd
@@ -233,3 +233,210 @@ sequenceDiagram
 
     ```
 
+- #### Activations
+  It is accessible to active or deactive an actor or a participant.
+  - `activate` or `deactivate` key word.
+  - `+` or `-` operator instead.
+  
+  you can choose one of the both above to **active** or **deactive** the participant you want, e.g.
+
+  ```javascript
+    ...mermaid
+    sequenceDiagram
+
+      participant P as Phoebe
+      participant V as Vera
+
+      P ->>  V: Hi
+      activate V   # activate Vera
+      V -->> P: Hello
+      deactivate V # when Vera returns, deactivate
+
+    ...
+
+  ```
+
+  ```mermaid
+  sequenceDiagram
+
+    participant P as Phoebe
+    participant V as Vera
+
+    P ->>  V: Hi
+    activate V   # activate Vera
+    V -->> P: Hello
+    deactivate V # when Vera returns, deactivate
+
+  ```
+
+  If use `+` and `-` operator, <br/>
+
+  ```javascript
+    ...mermaid
+    sequenceDiagram
+
+      participant P as Phoebe
+      participant V as Vera
+
+      P ->>  +V: Hi    # activate Vera, "+" === activate V
+      V -->> -P: Hello # when Vera returns, deactivate, "-" === deactivate V
+
+    ...
+
+  ```
+
+  ```mermaid
+  sequenceDiagram
+
+    participant P as Phoebe
+    participant V as Vera
+
+    P ->>  +V: Hi
+    V -->> -P: Hello
+
+  ```
+
+- #### Notes
+  It is accessible in `mermaid` to put note label on an actor or actors, which types showing as:
+
+  - **left of**  : notes placed to the participants's left
+  ```javascript
+
+    ...mermaid
+    sequenceDiagram
+      participant P as Phoebe
+      participant V as Vera
+
+      P ->>  +V: Hi
+
+      %% use Note to declare
+      Note right of V: This is a note label on the right side of Vera
+      
+      V -->> -P: Hello
+
+    ...
+
+  ```
+  
+  ```mermaid
+  sequenceDiagram
+    participant P as Phoebe
+    participant V as Vera
+
+    P ->>  +V: Hi
+    Note right of V: This is a note label on the right side of Vera
+    V -->> -P: Hello
+
+  ``` 
+
+  - **right of** : notes placed to the participants's right
+  
+  ```javascript
+
+    ...mermaid
+    sequenceDiagram
+      participant P as Phoebe
+      participant V as Vera
+
+      P ->>  +V: Hi
+
+      %% use Note to declare
+      Note left of V: This is a note label on the left side of Vera
+      
+      V -->> -P: Hello
+
+    ...
+
+  ```
+  
+  ```mermaid
+  sequenceDiagram
+    participant P as Phoebe
+    participant V as Vera
+
+    P ->>  +V: Hi
+    Note left of V: This is a note label on the right left of Vera
+    V -->> -P: Hello
+
+  ``` 
+
+  - **over**     : notes spanning two participants
+  ```javascript
+
+    ...mermaid
+    sequenceDiagram
+      participant P as Phoebe
+      participant V as Vera
+
+      P ->>  +V: Hi
+      V -->> -P: Hello
+
+      %% use Note to declare
+      Note over P, V: This is a note label spanning Phoebe and Vera
+
+    ...
+
+  ```
+  
+  ```mermaid
+  sequenceDiagram
+    participant P as Phoebe
+    participant V as Vera
+
+    P ->>  +V: Hi
+    V -->> -P: Hello
+
+    %% use Note to declare
+    Note over P, V: This is a note label spanning Phoebe and Vera
+
+  ``` 
+
+- #### Loops
+  
+  If you want to display a loop in sequence diagram, it is also accessible.
+
+  - **declare**
+  ```javascript
+    
+    %% use loop and end keywords
+    %% [loop name] is optional
+
+    loop [loop name]
+      %% your diagram
+    end 
+
+  ```
+  - **sample**
+  ```mermaid
+  sequenceDiagram
+    participant P as Phoebe
+    participant V as Vera
+
+
+    loop
+      P -->> V: hello, how is it going? 
+      V -->> P: Hi, pardon ?
+    end
+  ```
+
+- #### Alt
+  
+- #### Parallel
+  
+- #### Critical Region
+
+- #### Break
+
+- #### Background Highlighting
+
+- #### Comments
+
+- #### Entity codes to escape characters
+
+- #### sequenceNumbers
+
+- #### Actor Menus
+
+- #### Styling
+
+- #### Configuration
